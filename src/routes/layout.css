@@ -1,0 +1,93 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+/* ── Reveal — hide before JS paints them visible ─ */
+[data-reveal-pending] {
+	opacity: 0;
+}
+
+/* ── Base ─────────────────────────────────────── */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Space Grotesk', system-ui, sans-serif;
+	background: #0A0A0A;
+	color: #0d0d0d;
+	cursor: none;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@media (pointer: coarse) {
+	body {
+		cursor: auto;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 3px;
+}
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background: #e8003d;
+	border-radius: 2px;
+}
+
+/* ── Keyframes ────────────────────────────────── */
+@keyframes float-up {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-16px);
+	}
+}
+
+@keyframes float-down {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(16px);
+	}
+}
+
+@keyframes marquee-fwd {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+@keyframes marquee-rev {
+	from {
+		transform: translateX(-50%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+/* ── Utilities ────────────────────────────────── */
+.animate-float-up {
+	animation: float-up 5s ease-in-out infinite;
+}
+.animate-float-down {
+	animation: float-down 6.5s ease-in-out infinite;
+}
+.animate-marquee {
+	animation: marquee-fwd 28s linear infinite;
+}
+.animate-marquee-rev {
+	animation: marquee-rev 34s linear infinite;
+}
