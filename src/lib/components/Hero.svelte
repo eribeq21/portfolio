@@ -491,7 +491,8 @@
 					<img
 						src="/profile/Eriseldi_Beqiri_Personal_Picture.png"
 						alt="Eriseldi Beqiri"
-						class="h-52 w-full object-cover object-top grayscale transition-all duration-700 hover:grayscale-0"
+						class="h-65 w-full object-cover object-top grayscale transition-all duration-700 hover:grayscale-0"
+						style="transform:rotate(-1.5deg); object-position: center 22%;"
 					/>
 					<div class="absolute inset-0 bg-linear-to-t from-[#0A0A0A]/80 to-transparent"></div>
 					<div

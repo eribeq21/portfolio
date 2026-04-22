@@ -1,13 +1,13 @@
 <script>
 	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
+	import fav from '$lib/assets/fav.png';
 	import Cursor from '$lib/components/Cursor.svelte';
 
 	let { children } = $props();
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" href={fav} />
 </svelte:head>
 
 <Cursor />
